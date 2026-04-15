@@ -40,6 +40,68 @@ h1, h2 {
     margin-top: 30px;
 }
 
+.month-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 days a week */
+    gap: 5px;
+    margin-top: 20px;
+    background-color: var(--card-background);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.day-header {
+    text-align: center;
+    font-weight: bold;
+    color: var(--accent-color-1);
+    padding: 5px 0;
+}
+
+.day-cell {
+    background-color: var(--background-dark);
+    border-radius: 5px;
+    padding: 10px 5px;
+    text-align: center;
+    min-height: 60px; /* To give space for events */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 0.9em;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.day-number {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.event {
+    background-color: var(--accent-color-2); /* Light Salmon */
+    color: var(--background-dark);
+    font-size: 0.75em;
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin-top: 2px;
+    width: calc(100% - 10px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.away-event {
+    background-color: var(--primary-color); /* Vibrant Red */
+    color: var(--text-light);
+}
+
+.day-cell.today {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+}
+
 .month-card {
     background-color: var(--primary-color); /* To be overridden by specific month colors */
     border-radius: 8px;
