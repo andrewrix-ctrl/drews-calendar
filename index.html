@@ -5,22 +5,494 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drew's Calendar - Yearly View</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .yearly-month-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 2px;
+            margin: 0;
+            padding: 5px;
+            background-color: var(--card-background);
+            border-radius: 5px;
+            font-size: 0.8em;
+            min-height: 120px; /* Small height for mini-month */
+        }
+        .yearly-day-header {
+            text-align: center;
+            font-weight: bold;
+            color: var(--accent-color-1);
+            padding: 2px 0;
+            font-size: 0.7em;
+        }
+        .yearly-day-cell {
+            background-color: var(--background-dark);
+            border-radius: 3px;
+            min-height: 25px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8em;
+            color: var(--text-light);
+            position: relative;
+        }
+        .yearly-day-cell.event-active {
+            background-color: var(--accent-color-2);
+            color: var(--background-dark);
+            font-weight: bold;
+        }
+        .yearly-day-cell.away-yearly {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+        }
+        .yearly-grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .yearly-month-container {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .yearly-month-title {
+            color: var(--secondary-color);
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Drew's 2026 Calendar ✨</h1>
         <p style="text-align: center; color: var(--text-light); margin-bottom: 25px;">A consolidated view of all your exciting plans for the rest of the year!</p>
 
-        <div class="calendar-grid">
-            <div class="month-card apr"><a href="april.html">April</a></div>
-            <div class="month-card may"><a href="may.html">May</a></div>
-            <div class="month-card jun"><a href="jun.html">June</a></div>
-            <div class="month-card jul"><a href="jul.html">July</a></div>
-            <div class="month-card aug"><a href="aug.html">August</a></div>
-            <div class="month-card sep"><a href="sep.html">September</a></div>
-            <div class="month-card oct"><a href="oct.html">October</a></div>
-            <div class="month-card nov"><a href="nov.html">November</a></div>
-            <div class="month-card dec"><a href="dec.html">December</a></div>
+        <div class="yearly-grid-container">
+
+            <!-- April 2026 -->
+            <div class="yearly-month-container">
+                <h2 class="yearly-month-title"><a href="april.html" style="color: var(--secondary-color); text-decoration: none;">April</a></h2>
+                <div class="yearly-month-grid">
+                    <div class="yearly-day-header">Mon</div>
+                    <div class="yearly-day-header">Tue</div>
+                    <div class="yearly-day-header">Wed</div>
+                    <div class="yearly-day-header">Thu</div>
+                    <div class="yearly-day-header">Fri</div>
+                    <div class="yearly-day-header">Sat</div>
+                    <div class="yearly-day-header">Sun</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                    <div class="yearly-day-cell">1</div>
+                    <div class="yearly-day-cell">2</div>
+                    <div class="yearly-day-cell">3</div>
+                    <div class="yearly-day-cell">4</div>
+                    <div class="yearly-day-cell">5</div>
+                    <div class="yearly-day-cell">6</div>
+                    <div class="yearly-day-cell">7</div>
+                    <div class="yearly-day-cell">8</div>
+                    <div class="yearly-day-cell">9</div>
+                    <div class="yearly-day-cell">10</div>
+                    <div class="yearly-day-cell">11</div>
+                    <div class="yearly-day-cell">12</div>
+                    <div class="yearly-day-cell">13</div>
+                    <div class="yearly-day-cell">14</div>
+                    <div class="yearly-day-cell event-active">15</div>
+                    <div class="yearly-day-cell event-active">16</div>
+                    <div class="yearly-day-cell event-active">17</div>
+                    <div class="yearly-day-cell">18</div>
+                    <div class="yearly-day-cell">19</div>
+                    <div class="yearly-day-cell away-yearly">20</div>
+                    <div class="yearly-day-cell away-yearly">21</div>
+                    <div class="yearly-day-cell away-yearly">22</div>
+                    <div class="yearly-day-cell away-yearly">23</div>
+                    <div class="yearly-day-cell away-yearly">24</div>
+                    <div class="yearly-day-cell">25</div>
+                    <div class="yearly-day-cell">26</div>
+                    <div class="yearly-day-cell">27</div>
+                    <div class="yearly-day-cell away-yearly">28</div>
+                    <div class="yearly-day-cell away-yearly">29</div>
+                    <div class="yearly-day-cell away-yearly">30</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                </div>
+            </div>
+
+            <!-- May 2026 -->
+            <div class="yearly-month-container">
+                <h2 class="yearly-month-title"><a href="may.html" style="color: var(--secondary-color); text-decoration: none;">May</a></h2>
+                <div class="yearly-month-grid">
+                    <div class="yearly-day-header">Mon</div>
+                    <div class="yearly-day-header">Tue</div>
+                    <div class="yearly-day-header">Wed</div>
+                    <div class="yearly-day-header">Thu</div>
+                    <div class="yearly-day-header">Fri</div>
+                    <div class="yearly-day-header">Sat</div>
+                    <div class="yearly-day-header">Sun</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                    <div class="yearly-day-cell">1</div>
+                    <div class="yearly-day-cell">2</div>
+                    <div class="yearly-day-cell">3</div>
+                    <div class="yearly-day-cell">4</div>
+                    <div class="yearly-day-cell">5</div>
+                    <div class="yearly-day-cell">6</div>
+                    <div class="yearly-day-cell">7</div>
+                    <div class="yearly-day-cell">8</div>
+                    <div class="yearly-day-cell">9</div>
+                    <div class="yearly-day-cell">10</div>
+                    <div class="yearly-day-cell">11</div>
+                    <div class="yearly-day-cell away-yearly">12</div>
+                    <div class="yearly-day-cell away-yearly">13</div>
+                    <div class="yearly-day-cell away-yearly">14</div>
+                    <div class="yearly-day-cell away-yearly">15</div>
+                    <div class="yearly-day-cell">16</div>
+                    <div class="yearly-day-cell">17</div>
+                    <div class="yearly-day-cell">18</div>
+                    <div class="yearly-day-cell">19</div>
+                    <div class="yearly-day-cell">20</div>
+                    <div class="yearly-day-cell">21</div>
+                    <div class="yearly-day-cell">22</div>
+                    <div class="yearly-day-cell">23</div>
+                    <div class="yearly-day-cell">24</div>
+                    <div class="yearly-day-cell">25</div>
+                    <div class="yearly-day-cell">26</div>
+                    <div class="yearly-day-cell">27</div>
+                    <div class="yearly-day-cell">28</div>
+                    <div class="yearly-day-cell event-active">29</div>
+                    <div class="yearly-day-cell">30</div>
+                    <div class="yearly-day-cell">31</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                </div>
+            </div>
+
+            <!-- June 2026 -->
+            <div class="yearly-month-container">
+                <h2 class="yearly-month-title"><a href="jun.html" style="color: var(--secondary-color); text-decoration: none;">June</a></h2>
+                <div class="yearly-month-grid">
+                    <div class="yearly-day-header">Mon</div>
+                    <div class="yearly-day-header">Tue</div>
+                    <div class="yearly-day-header">Wed</div>
+                    <div class="yearly-day-header">Thu</div>
+                    <div class="yearly-day-header">Fri</div>
+                    <div class="yearly-day-header">Sat</div>
+                    <div class="yearly-day-header">Sun</div>
+                    <div class="yearly-day-cell">1</div>
+                    <div class="yearly-day-cell">2</div>
+                    <div class="yearly-day-cell">3</div>
+                    <div class="yearly-day-cell">4</div>
+                    <div class="yearly-day-cell">5</div>
+                    <div class="yearly-day-cell">6</div>
+                    <div class="yearly-day-cell">7</div>
+                    <div class="yearly-day-cell">8</div>
+                    <div class="yearly-day-cell">9</div>
+                    <div class="yearly-day-cell">10</div>
+                    <div class="yearly-day-cell">11</div>
+                    <div class="yearly-day-cell">12</div>
+                    <div class="yearly-day-cell">13</div>
+                    <div class="yearly-day-cell">14</div>
+                    <div class="yearly-day-cell">15</div>
+                    <div class="yearly-day-cell">16</div>
+                    <div class="yearly-day-cell">17</div>
+                    <div class="yearly-day-cell">18</div>
+                    <div class="yearly-day-cell">19</div>
+                    <div class="yearly-day-cell">20</div>
+                    <div class="yearly-day-cell">21</div>
+                    <div class="yearly-day-cell">22</div>
+                    <div class="yearly-day-cell">23</div>
+                    <div class="yearly-day-cell">24</div>
+                    <div class="yearly-day-cell">25</div>
+                    <div class="yearly-day-cell">26</div>
+                    <div class="yearly-day-cell">27</div>
+                    <div class="yearly-day-cell">28</div>
+                    <div class="yearly-day-cell">29</div>
+                    <div class="yearly-day-cell">30</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                </div>
+            </div>
+
+            <!-- July 2026 -->
+            <div class="yearly-month-container">
+                <h2 class="yearly-month-title"><a href="jul.html" style="color: var(--secondary-color); text-decoration: none;">July</a></h2>
+                <div class="yearly-month-grid">
+                    <div class="yearly-day-header">Mon</div>
+                    <div class="yearly-day-header">Tue</div>
+                    <div class="yearly-day-header">Wed</div>
+                    <div class="yearly-day-header">Thu</div>
+                    <div class="yearly-day-header">Fri</div>
+                    <div class="yearly-day-header">Sat</div>
+                    <div class="yearly-day-header">Sun</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                    <div class="yearly-day-cell">1</div>
+                    <div class="yearly-day-cell">2</div>
+                    <div class="yearly-day-cell">3</div>
+                    <div class="yearly-day-cell">4</div>
+                    <div class="yearly-day-cell">5</div>
+                    <div class="yearly-day-cell">6</div>
+                    <div class="yearly-day-cell">7</div>
+                    <div class="yearly-day-cell">8</div>
+                    <div class="yearly-day-cell">9</div>
+                    <div class="yearly-day-cell">10</div>
+                    <div class="yearly-day-cell">11</div>
+                    <div class="yearly-day-cell">12</div>
+                    <div class="yearly-day-cell">13</div>
+                    <div class="yearly-day-cell">14</div>
+                    <div class="yearly-day-cell">15</div>
+                    <div class="yearly-day-cell">16</div>
+                    <div class="yearly-day-cell">17</div>
+                    <div class="yearly-day-cell">18</div>
+                    <div class="yearly-day-cell">19</div>
+                    <div class="yearly-day-cell">20</div>
+                    <div class="yearly-day-cell">21</div>
+                    <div class="yearly-day-cell">22</div>
+                    <div class="yearly-day-cell">23</div>
+                    <div class="yearly-day-cell">24</div>
+                    <div class="yearly-day-cell">25</div>
+                    <div class="yearly-day-cell">26</div>
+                    <div class="yearly-day-cell">27</div>
+                    <div class="yearly-day-cell">28</div>
+                    <div class="yearly-day-cell">29</div>
+                    <div class="yearly-day-cell">30</div>
+                    <div class="yearly-day-cell">31</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                </div>
+            </div>
+
+            <!-- August 2026 -->
+            <div class="yearly-month-container">
+                <h2 class="yearly-month-title"><a href="aug.html" style="color: var(--secondary-color); text-decoration: none;">August</a></h2>
+                <div class="yearly-month-grid">
+                    <div class="yearly-day-header">Mon</div>
+                    <div class="yearly-day-header">Tue</div>
+                    <div class="yearly-day-header">Wed</div>
+                    <div class="yearly-day-header">Thu</div>
+                    <div class="yearly-day-header">Fri</div>
+                    <div class="yearly-day-header">Sat</div>
+                    <div class="yearly-day-header">Sun</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                    <div class="yearly-day-cell">1</div>
+                    <div class="yearly-day-cell">2</div>
+                    <div class="yearly-day-cell">3</div>
+                    <div class="yearly-day-cell">4</div>
+                    <div class="yearly-day-cell">5</div>
+                    <div class="yearly-day-cell">6</div>
+                    <div class="yearly-day-cell">7</div>
+                    <div class="yearly-day-cell">8</div>
+                    <div class="yearly-day-cell">9</div>
+                    <div class="yearly-day-cell">10</div>
+                    <div class="yearly-day-cell">11</div>
+                    <div class="yearly-day-cell">12</div>
+                    <div class="yearly-day-cell">13</div>
+                    <div class="yearly-day-cell">14</div>
+                    <div class="yearly-day-cell">15</div>
+                    <div class="yearly-day-cell">16</div>
+                    <div class="yearly-day-cell">17</div>
+                    <div class="yearly-day-cell">18</div>
+                    <div class="yearly-day-cell">19</div>
+                    <div class="yearly-day-cell">20</div>
+                    <div class="yearly-day-cell">21</div>
+                    <div class="yearly-day-cell">22</div>
+                    <div class="yearly-day-cell">23</div>
+                    <div class="yearly-day-cell">24</div>
+                    <div class="yearly-day-cell">25</div>
+                    <div class="yearly-day-cell">26</div>
+                    <div class="yearly-day-cell">27</div>
+                    <div class="yearly-day-cell">28</div>
+                    <div class="yearly-day-cell">29</div>
+                    <div class="yearly-day-cell">30</div>
+                    <div class="yearly-day-cell">31</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                </div>
+            </div>
+
+            <!-- September 2026 -->
+            <div class="yearly-month-container">
+                <h2 class="yearly-month-title"><a href="sep.html" style="color: var(--secondary-color); text-decoration: none;">September</a></h2>
+                <div class="yearly-month-grid">
+                    <div class="yearly-day-header">Mon</div>
+                    <div class="yearly-day-header">Tue</div>
+                    <div class="yearly-day-header">Wed</div>
+                    <div class="yearly-day-header">Thu</div>
+                    <div class="yearly-day-header">Fri</div>
+                    <div class="yearly-day-header">Sat</div>
+                    <div class="yearly-day-header">Sun</div>
+                    <div class="yearly-day-cell"></div>
+                    <div class="yearly-day-cell">1</div>
+                    <div class="yearly-day-cell">2</div>
+                    <div class="yearly-day-cell">3</div>
+                    <div class="yearly-day-cell">4</div>
+                    <div class="yearly-day-cell">5</div>
+                    <div class="yearly-day-cell">6</div>
+                    <div class="yearly-day-cell">7</div>
+                    <div class="yearly-day-cell">8</div>
+                    <div class="yearly-day-cell">9</div>
+                    <div class="yearly-day-cell">10</div>
+                    <div class="yearly-day-cell">11</div>
+                    <div class="yearly-day-cell">12</div>
+                    <div class="yearly-day-cell">13</div>
+                    <div class="yearly-day-cell">14</div>
+                    <div class="yearly-day-cell">15</div>
+                    <div class="yearly-day-cell">16</div>
+                    <div class="yearly-day-cell">17</div>
+                    <div class="yearly-day-cell">18</div>
+                    <div class="yearly-day-cell">19</div>
+                    <div class="yearly-day-cell">20</div>
+                    <div class="yearly-day-cell">21</div>
+                    <div class="yearly-day-cell">22</div>
+                    <div class="yearly-day-cell">23</div>
+                    <div class="yearly-day-cell">24</div>
+                    <div class="yearly-day-cell">25</div>
+                    <div class="yearly-day-cell">26</div>
+                    <div class="yearly-day-cell">27</div>
+                    <div class="yearly-day-cell away-yearly">28</div>
+                    <div class="yearly-day-cell away-yearly">29</div>
+                    <div class="yearly-day-cell away-yearly">30</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                </div>
+            </div>
+
+            <!-- October 2026 -->
+            <div class="yearly-month-container">
+                <h2 class="yearly-month-title"><a href="oct.html" style="color: var(--secondary-color); text-decoration: none;">October</a></h2>
+                <div class="yearly-month-grid">
+                    <div class="yearly-day-header">Mon</div>
+                    <div class="yearly-day-header">Tue</div>
+                    <div class="yearly-day-header">Wed</div>
+                    <div class="yearly-day-header">Thu</div>
+                    <div class="yearly-day-header">Fri</div>
+                    <div class="yearly-day-header">Sat</div>
+                    <div class="yearly-day-header">Sun</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                    <div class="yearly-day-cell away-yearly">1</div>
+                    <div class="yearly-day-cell away-yearly">2</div>
+                    <div class="yearly-day-cell away-yearly">3</div>
+                    <div class="yearly-day-cell away-yearly">4</div>
+                    <div class="yearly-day-cell away-yearly">5</div>
+                    <div class="yearly-day-cell away-yearly">6</div>
+                    <div class="yearly-day-cell away-yearly">7</div>
+                    <div class="yearly-day-cell away-yearly">8</div>
+                    <div class="yearly-day-cell away-yearly">9</div>
+                    <div class="yearly-day-cell away-yearly">10</div>
+                    <div class="yearly-day-cell away-yearly">11</div>
+                    <div class="yearly-day-cell away-yearly">12</div>
+                    <div class="yearly-day-cell away-yearly">13</div>
+                    <div class="yearly-day-cell away-yearly">14</div>
+                    <div class="yearly-day-cell away-yearly">15</div>
+                    <div class="yearly-day-cell away-yearly">16</div>
+                    <div class="yearly-day-cell away-yearly">17</div>
+                    <div class="yearly-day-cell">18</div>
+                    <div class="yearly-day-cell">19</div>
+                    <div class="yearly-day-cell">20</div>
+                    <div class="yearly-day-cell">21</div>
+                    <div class="yearly-day-cell">22</div>
+                    <div class="yearly-day-cell">23</div>
+                    <div class="yearly-day-cell">24</div>
+                    <div class="yearly-day-cell">25</div>
+                    <div class="yearly-day-cell">26</div>
+                    <div class="yearly-day-cell">27</div>
+                    <div class="yearly-day-cell">28</div>
+                    <div class="yearly-day-cell">29</div>
+                    <div class="yearly-day-cell">30</div>
+                    <div class="yearly-day-cell">31</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                </div>
+            </div>
+
+            <!-- November 2026 -->
+            <div class="yearly-month-container">
+                <h2 class="yearly-month-title"><a href="nov.html" style="color: var(--secondary-color); text-decoration: none;">November</a></h2>
+                <div class="yearly-month-grid">
+                    <div class="yearly-day-header">Mon</div>
+                    <div class="yearly-day-header">Tue</div>
+                    <div class="yearly-day-header">Wed</div>
+                    <div class="yearly-day-header">Thu</div>
+                    <div class="yearly-day-header">Fri</div>
+                    <div class="yearly-day-header">Sat</div>
+                    <div class="yearly-day-header">Sun</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                    <div class="yearly-day-cell">1</div>
+                    <div class="yearly-day-cell">2</div>
+                    <div class="yearly-day-cell">3</div>
+                    <div class="yearly-day-cell">4</div>
+                    <div class="yearly-day-cell">5</div>
+                    <div class="yearly-day-cell">6</div>
+                    <div class="yearly-day-cell">7</div>
+                    <div class="yearly-day-cell">8</div>
+                    <div class="yearly-day-cell">9</div>
+                    <div class="yearly-day-cell">10</div>
+                    <div class="yearly-day-cell">11</div>
+                    <div class="yearly-day-cell">12</div>
+                    <div class="yearly-day-cell">13</div>
+                    <div class="yearly-day-cell">14</div>
+                    <div class="yearly-day-cell">15</div>
+                    <div class="yearly-day-cell">16</div>
+                    <div class="yearly-day-cell">17</div>
+                    <div class="yearly-day-cell">18</div>
+                    <div class="yearly-day-cell">19</div>
+                    <div class="yearly-day-cell">20</div>
+                    <div class="yearly-day-cell">21</div>
+                    <div class="yearly-day-cell">22</div>
+                    <div class="yearly-day-cell">23</div>
+                    <div class="yearly-day-cell">24</div>
+                    <div class="yearly-day-cell">25</div>
+                    <div class="yearly-day-cell">26</div>
+                    <div class="yearly-day-cell">27</div>
+                    <div class="yearly-day-cell">28</div>
+                    <div class="yearly-day-cell">29</div>
+                    <div class="yearly-day-cell">30</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                </div>
+            </div>
+
+            <!-- December 2026 -->
+            <div class="yearly-month-container">
+                <h2 class="yearly-month-title"><a href="dec.html" style="color: var(--secondary-color); text-decoration: none;">December</a></h2>
+                <div class="yearly-month-grid">
+                    <div class="yearly-day-header">Mon</div>
+                    <div class="yearly-day-header">Tue</div>
+                    <div class="yearly-day-header">Wed</div>
+                    <div class="yearly-day-header">Thu</div>
+                    <div class="yearly-day-header">Fri</div>
+                    <div class="yearly-day-header">Sat</div>
+                    <div class="yearly-day-header">Sun</div>
+                    <div class="yearly-day-cell"></div>
+                    <div class="yearly-day-cell">1</div>
+                    <div class="yearly-day-cell">2</div>
+                    <div class="yearly-day-cell">3</div>
+                    <div class="yearly-day-cell">4</div>
+                    <div class="yearly-day-cell">5</div>
+                    <div class="yearly-day-cell">6</div>
+                    <div class="yearly-day-cell">7</div>
+                    <div class="yearly-day-cell">8</div>
+                    <div class="yearly-day-cell">9</div>
+                    <div class="yearly-day-cell">10</div>
+                    <div class="yearly-day-cell">11</div>
+                    <div class="yearly-day-cell">12</div>
+                    <div class="yearly-day-cell">13</div>
+                    <div class="yearly-day-cell">14</div>
+                    <div class="yearly-day-cell">15</div>
+                    <div class="yearly-day-cell">16</div>
+                    <div class="yearly-day-cell">17</div>
+                    <div class="yearly-day-cell">18</div>
+                    <div class="yearly-day-cell">19</div>
+                    <div class="yearly-day-cell">20</div>
+                    <div class="yearly-day-cell">21</div>
+                    <div class="yearly-day-cell">22</div>
+                    <div class="yearly-day-cell">23</div>
+                    <div class="yearly-day-cell">24</div>
+                    <div class="yearly-day-cell">25</div>
+                    <div class="yearly-day-cell">26</div>
+                    <div class="yearly-day-cell">27</div>
+                    <div class="yearly-day-cell">28</div>
+                    <div class="yearly-day-cell">29</div>
+                    <div class="yearly-day-cell">30</div>
+                    <div class="yearly-day-cell">31</div>
+                    <div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div><div class="yearly-day-cell"></div>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
