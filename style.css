@@ -1,0 +1,78 @@
+:root {
+    --primary-color: #FF6B6B; /* Vibrant Red */
+    --secondary-color: #4ECDC4; /* Aqua Green */
+    --accent-color-1: #45B7D1; /* Sky Blue */
+    --accent-color-2: #FFA07A; /* Light Salmon */
+    --background-dark: #2C3E50; /* Dark Blue-Grey */
+    --text-light: #ECF0F1; /* Light Grey */
+    --card-background: #34495E; /* Medium Blue-Grey */
+    --border-color: #7F8C8D; /* Grey */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.month-card {
+    background-color: var(--primary-color); /* To be overridden by specific month colors */
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    color: var(--background-dark);
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.month-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.month-card a {
+    color: var(--background-dark);
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.month-card a:hover {
+    text-decoration: underline;
+}
+
+/* Specific month colors */
+.month-card.apr { background-color: #A06AB4; } /* Vibrant Purple */
+.month-card.may { background-color: #FF6B6B; } /* Vibrant Red */
+.month-card.jun { background-color: #4ECDC4; } /* Aqua Green */
+.month-card.jul { background-color: #45B7D1; } /* Sky Blue */
+.month-card.aug { background-color: #FFA07A; } /* Light Salmon */
+.month-card.sep { background-color: #9B59B6; } /* Amethyst */
+.month-card.oct { background-color: #F1C40F; } /* Sunflower Yellow */
+.month-card.nov { background-color: #1ABC9C; } /* Turquoise */
+.month-card.dec { background-color: #E74C3C; } /* Alizarin Red */
